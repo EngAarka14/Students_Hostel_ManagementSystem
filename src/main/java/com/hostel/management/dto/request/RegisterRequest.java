@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class RegisterRequest {
     @NotBlank
-    @Size(min = 3, max = 50)
+    @Size(min = 3, max = 50, message = "maximum 3 and max 50")
     private String username;
 
     @NotBlank
@@ -16,7 +16,7 @@ public class RegisterRequest {
     private String email;
 
     @NotBlank
-    @Size(min = 6, message = "Password must be at least 6 characters")
+    @Size(min = 8, message = "password must be at least 8")
     private String password;
 
     // Optional: link registration directly to a student profile
