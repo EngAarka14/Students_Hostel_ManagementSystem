@@ -9,8 +9,6 @@ import java.util.List;
 public interface AllocationRepository extends JpaRepository<Allocation, Long> {
 
     List<Allocation> findByStudentId(Long studentId);
-
     List<Allocation> findByRoomId(Long roomId);
-
     List<Allocation> findByStatus(AllocationStatus status);
 }
